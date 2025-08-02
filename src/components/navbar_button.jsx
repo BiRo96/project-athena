@@ -11,7 +11,7 @@ function NavbarButton(params) {
                 <a 
                 href={"#/" + (params.link ?? "") } 
                 { ...params.active ? 'aria-current="page"' : ''} 
-                class={buttonClass}>
+                className={buttonClass}>
                     {params.text ?? ""}
                 </a>
             </li>
