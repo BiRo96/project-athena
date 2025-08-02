@@ -1,8 +1,7 @@
 import logo from '../assets/logo.svg'
 
-function Logo(){
-    return <img src={logo} class="h-10 bg-white p-1 rounded-b-full" alt="Flowbite Logo" />
-
+function Logo({size}){
+    return <img src={logo} class={"dark:bg-white bg-gray-200 shadow-md shadow-black p-1 rounded-b-full " + (size ?? "h-full")} alt="Project Athena Logo" />
 }
 
 export default Logo
