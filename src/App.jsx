@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Container from './components/Container'
+import NotFoundPage from './pages/NotFound'
 
 function App() {
   const location = useLocation();
@@ -15,7 +16,7 @@ function App() {
       <Container>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='*' element={<h1>404</h1>} />
+          <Route path='*' element={<NotFoundPage/>} />
         </Routes>
       </Container>
     </div>
