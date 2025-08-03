@@ -12,9 +12,17 @@ function Contents() {
         
     }, []);
 
-    function dataLinks(params) {
-        if (Array.isArray(params)) {
-            return params.map(element => {
+    function dataLinks(datas) {
+        
+        if (Array.isArray(datas)) {
+            // sort data by recordDate
+            const sortedDatas = datas.sort((a, b) => {
+                const dateA = new Date(a.recordDate);
+                const dateB = new Date(b.recordDate);
+                return dateB - dateA;
+            });
+
+            return sortedDatas.map(element => {
                     
                 return <DataLinks 
                     key={element.url}
