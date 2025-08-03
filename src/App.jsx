@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Container from './components/Container'
 import NotFoundPage from './pages/NotFound'
+import Contents from './pages/Contents'
 
 function App() {
   const location = useLocation();
@@ -16,6 +17,7 @@ function App() {
       <Container>
         <Routes>
           <Route path='/' element={<Home/>} />
+          <Route path='/contents' element={<Contents/>} />
           <Route path='*' element={<NotFoundPage/>} />
         </Routes>
       </Container>
