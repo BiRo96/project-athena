@@ -1,5 +1,6 @@
 import { CircleFlag, CircleFlagLanguage } from "react-circle-flags"
 import FormatIcon from "./format_icon"
+import TagTranslate from "./tag_translate"
 
 /**
  * DataLinks
@@ -36,7 +37,11 @@ function DataLinks({
             </div>
 
             <p>{tags.map(tag => {
-                return <span className="mr-1 pb-1 pt-0 px-2 rounded-full bg-blue-600 dark:bg-blue-500 text-white dark:text-gray-200" key={tag}>{tag}</span>  
+                return (
+                    <span className="mr-1 pb-1 pt-0 px-2 rounded-full bg-blue-600 dark:bg-blue-500 text-white dark:text-gray-200" key={tag}>
+                        <TagTranslate language={language} tag={tag}/>
+                    </span>
+                )  
             })}</p>
             
             <div className="flex flex-row gap-8 mt-4 mb-2">
