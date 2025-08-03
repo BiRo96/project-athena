@@ -10,7 +10,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className='bg-gray-200 dark:bg-gray-500 h-screen w-screen flex flex-col'>
+    <div className='h-screen w-screen flex flex-col'>
       <Splash/>
       <Navbar activePath={location.pathname}/>
       <Container>
