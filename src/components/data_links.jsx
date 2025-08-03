@@ -36,15 +36,17 @@ function DataLinks({
                 <div className="flex flex-col justify-center">{source}</div>
             </div>
 
-            <p>{tags.map(tag => {
-                return (
-                    <span className="mr-1 pb-1 pt-0 px-2 rounded-full bg-blue-600 dark:bg-blue-500 text-white dark:text-gray-200" key={tag}>
-                        <TagTranslate language={language} tag={tag}/>
-                    </span>
-                )  
-            })}</p>
+            <p className="flex flex-row flex-wrap gap-1">
+                {tags.map(tag => {
+                    return (
+                        <span className="mr-1 pb-1 pt-0 px-2 rounded-full bg-blue-600 dark:bg-blue-500 text-white dark:text-gray-200" key={tag}>
+                            <TagTranslate language={language} tag={tag}/>
+                        </span>
+                    )  
+                })}
+            </p>
             
-            <div className="flex flex-row gap-8 mt-4 mb-2">
+            <div className="flex flex-col sm:flex-row gap-8 mt-4 mb-2">
                 <div className="flex flex-col justify-center text-center">
                     <CircleFlag countryCode={language} title={language} alt={language} className="w-6 h-6 my-3" />
                 </div>
