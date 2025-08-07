@@ -48,7 +48,7 @@ function DataLinks({
             
             <div className="flex flex-col sm:flex-row gap-8 mt-4 mb-2">
                 <div className="flex flex-col justify-center text-center">
-                    <CircleFlag countryCode={language} title={language} alt={language} className="w-6 h-6 my-3" />
+                    <CircleFlagLanguage languageCode={language} title={language} alt={language} className="w-6 h-6 my-3" />
                 </div>
                 <div className="flex flex-col justify-center text-center">
                     <p>
